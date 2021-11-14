@@ -15,8 +15,8 @@ Some of th given requisites where:
 - **Dog—"Dobby"** --> hairdresser every month. 
 ​
 The first filters I applied to look for possible locations were:
- 1. Madrid, Lisbon and London.
- 2. Requisites: Starbucks, Bars, Preschool and train stations.
+ 1. Madrid, Lisbon and London. These are three metropolitan capitals where one can easily find tech hubs.
+ 2. Requisites chossen: Starbucks, Bars, Preschool and train stations.
  
 ​
 # Working plan 
