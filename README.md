@@ -13,7 +13,7 @@ Some of th given requisites where:
 - **CEO** --> vegan.
 - **Maintenance guy** --> basketball court
 - **Dog—"Dobby"** --> hairdresser every month. 
-​
+
 The first filters I applied to look for possible locations were:
  1. Madrid, Lisbon and London. These are three metropolitan capitals where one can easily find tech hubs.
  2. Requisites chossen: Starbucks, Bars, Preschool and train stations.
