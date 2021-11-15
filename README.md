@@ -4,7 +4,7 @@
 
 # Objetive
 The objective of this project is to determine the perfect location for a new company in the gaming industry. 
-​
+
 Some of th given requisites where:
 - **Designers** --> near to companies that do design.
 - **30% of the company** --> have at least 1 child.
@@ -20,7 +20,6 @@ The first filters I applied to look for possible locations were:
  1. Madrid, Lisbon and London. These are three metropolitan capitals where one can easily find tech hubs.
  2. Requisites chossen: Starbucks, Bars, Preschool and train stations.
  
-​
 # Working plan 
 ​
 Before first filtering using MondoDB, I set an strategic location for each city, setting it up where most entreprises where settled on each citie. These were:

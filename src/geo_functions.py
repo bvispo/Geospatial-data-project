@@ -121,3 +121,11 @@ def puntuacion(x):
 
 def drop_columns(df):
     return df.drop(["_id", "location"], axis=1, inplace= True)
+
+def normalizacion(df,col):
+    norm = []
+    for i,row in final_punctuations.iterrows():
+        mini = final_punctuations[col].min()
+        maxi = final_punctuations[col].max()
+        norm.append((row[col]- mini)/(maxi-mini))
+    return norm
