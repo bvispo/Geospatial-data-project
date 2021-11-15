@@ -30,10 +30,16 @@ def extraetodo(json):
     Argg: the json.
     Returns: a list with th given data.
     """
-    todo = {"nombre": ["name"], "latitud": ["location", "lat"], "longitud": ["location", "lng"]} 
+    #todo = {"nombre": ["name"], "latitud": ["location", "lat"], "longitud": ["location", "lng"]} 
     total = []
-    for elemento in json:
-        place = {key: getFromDict(elemento, value) for key,value in todo.items()}
+   
+    for elemento in json["response"]["venues"]:
+        place =  {}
+        #place = {key: getFromDict(elemento, value) for key,value in todo.items()}
+        place["name"] = elemento['name']
+        place["latitud"] = elemento['location']['lat']
+        place["longitud"] = elemento['location']['lng']
+        place["shortname"] = elemento["categories"][0]['shortName']
         place["location"] = type_point([place["latitud"], place["longitud"]])
         total.append(place)
     return total
@@ -65,12 +71,15 @@ def places_cities(place, city):
         "query": f"{place}" #aquí pongo lo que quiero buscar en la ciudad.
 }
     resp = requests.get(url_query, params = parametros).json()
+    '''
     map_ = ["location", "lat"]
     getFromDict(resp["response"]["venues"][0], map_)
     resp["response"]["venues"][0]["location"]["address"]
+    '''
+
     loquebusco = resp["response"]["venues"]
     
-    return extraetodo(loquebusco)
+    return extraetodo(resp)
 
 def build_df(lovemosclaro:dict):
     """
@@ -99,3 +108,16 @@ def visualize():
     search_point = places_cities(place, city)
     gdf = gpd.GeoDataFrame(search_point, geometry=gpd.points_from_xy(search_point.longitud, search_point.latitud))
     return Map(Layer(gdf, "color:purple", popup_hover=[popup_element("nombre", f"{place} in {city}")]))
+
+def puntuacion(x):
+    if x == 'Train Station':
+        return 3
+    elif x == 'Starbucks':
+        return 4
+    elif x == 'Bar':
+        return 2
+    else:
+        return 1
+
+def drop_columns(df):
+    return df.drop(["_id", "location"], axis=1, inplace= True)
