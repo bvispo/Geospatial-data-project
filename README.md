@@ -1,5 +1,5 @@
 # Geospatial-data-project
-![foto] (https://github.com/bvispo/Geospatial-data-project/blob/main/games.png)
+![foto] (https://github.com/bvispo/Geospatial-data-project/blob/main/images/ciudad.jpg)
 
 
 # Objetive
