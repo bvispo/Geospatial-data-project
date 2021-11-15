@@ -1,4 +1,6 @@
 # Geospatial-data-project
+![foto] (https://github.com/bvispo/Geospatial-data-project/blob/main/games.png)
+
 
 # Objetive
 The objective of this project is to determine the perfect location for a new company in the gaming industry. 
@@ -26,7 +28,7 @@ Before first filtering using MondoDB, I set an strategic location for each city,
  - Lisbon: Avenida Antonio Augusto de Aguiar.
  - London: St Paul´s Cathedral.
 
- These coordinates were used to realice the API Foursquare calls, using **Starbucks, Bars, Preschools and train stations** in the three given cities: **Madrid, Lisbon and London**.
+ These coordinates were used to realice the API Foursquare calls, using **Starbucks, Bars, and Train Stations** in the three given cities: **Madrid, Lisbon and London**.
 
 
 ​Once all the information was downloaded in json format, I made a calculation of the distances between the coordinates of origin and the information obtained from Foursquare. 
@@ -40,7 +42,11 @@ The following resources have been used to achieve the objective of this project:
 ​
 ​
 ### Structure of the project files
-​​
+- **Src folder**, which contains the several functions applied along the project.
+- **Data_jsons**: folder that contains the different json files used in MongoDB.
+- **Two jupyter notebooks**: one, collections.ipynb, where I have called the Foursquare API. And the second, geoqueries.ipynb, where the different geoqueries are done.
+- **Readme**
+- **.gitignore**
 ​
 # Libraries
 ​
