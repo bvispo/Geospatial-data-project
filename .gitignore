@@ -4,5 +4,4 @@
 __pycache__
 Notebooks
 data
-.DS_Store
-images
+**/**/.DS_Store
