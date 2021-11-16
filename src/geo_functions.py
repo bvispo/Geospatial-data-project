@@ -111,21 +111,21 @@ def visualize():
 
 def puntuacion(x):
     if x == 'Train Station':
-        return 3
+        return 0.3
     elif x == 'Starbucks':
-        return 4
+        return 0.4
     elif x == 'Bar':
-        return 2
+        return 0.2
     else:
-        return 1
+        return 0.1
 
 def drop_columns(df):
     return df.drop(["_id", "location"], axis=1, inplace= True)
 
 def normalizacion(df,col):
     norm = []
-    for i,row in final_punctuations.iterrows():
-        mini = final_punctuations[col].min()
-        maxi = final_punctuations[col].max()
+    for i,row in df.iterrows():
+        mini = df[col].min()
+        maxi = df[col].max()
         norm.append((row[col]- mini)/(maxi-mini))
     return norm
