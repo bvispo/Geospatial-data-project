@@ -60,7 +60,6 @@ def places_cities(place, city):
     Returns: a json.
     """
     url_query = 'https://api.foursquare.com/v2/venues/search'
-    url_recomendados = 'https://api.foursquare.com/v2/venues/explore'
     client_id = os.getenv("tok1")
     client_secret = os.getenv("tok2")
     parametros = {
